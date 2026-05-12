@@ -207,10 +207,10 @@ const services = [
 ]
 
 const whyUs = [
-  { num: '24/7', title: 'Emergency Response', desc: 'Available for emergency calls — storm damage and hazardous trees do not wait for business hours.' },
-  { num: '100%', title: 'Free Estimates', desc: 'Every job starts with a free on-site estimate — no obligation, no surprises, straight pricing.' },
-  { num: '⭐⭐⭐⭐⭐', title: '5-Star Service', desc: 'We do not leave until the job is done right and your property is completely clean.' },
-  { num: 'SC', title: 'Locally Rooted', desc: 'Florence County based — we know the local trees, soil, and neighborhoods inside and out.' },
+{ num: '24/7', title: 'Emergency Response', desc: 'Available for emergency calls — storm damage and hazardous trees do not wait for business hours.' },
+{ num: '100%', title: 'Free Estimates', desc: 'Every job starts with a free on-site estimate — no obligation, no surprises, straight pricing.' },
+{ num: '5★', title: '5-Star Service', desc: 'We do not leave until the job is done right and your property is completely clean.' },
+{ num: 'SC', title: 'Locally Rooted', desc: 'Florence County based — we know the local trees, soil, and neighborhoods inside and out.' },
 ]
 
 const areas = ['Florence', 'Darlington', 'Lake City', 'Hartsville', 'Marion', 'Mullins', 'Dillon', 'Timmonsville', 'Pamplico', 'Effingham', 'Johnsonville', 'Lamar']
