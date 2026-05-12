@@ -25,11 +25,9 @@ const styles = `
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.3);
   }
-  .top-bar-brand {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
-    font-size: 20px; color: var(--white); letter-spacing: 0.05em; text-transform: uppercase;
+  .top-bar-brand img {
+    height: 44px; width: auto; display: block;
   }
-  .top-bar-brand span { color: var(--gold); }
   .call-btn {
     background: var(--gold); color: var(--dark);
     font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px;
@@ -207,12 +205,12 @@ const styles = `
 `
 
 const services = [
-  { icon: '🌳', name: 'Tree Removal', desc: 'Safe, efficient removal of dead, damaged, or hazardous trees of any size. We protect your property from start to finish.', price: 'Avg. $400 – $2,000' },
-  { icon: '✂️', name: 'Tree Trimming & Pruning', desc: 'Expert shaping and pruning to improve tree health, curb appeal, and safety. Keeps your trees growing strong for years.', price: 'Avg. $200 – $800' },
-  { icon: '🪵', name: 'Stump Grinding', desc: 'Complete stump removal using professional grinding equipment. Leave your yard clean, level, and ready to enjoy.', price: 'Avg. $100 – $400' },
-  { icon: '⚡', name: 'Emergency Tree Service', desc: 'Storm damage? Fallen tree? We respond fast — 24/7 — to protect your home and clear hazards before more damage occurs.', price: 'Call for same-day pricing' },
-  { icon: '🏠', name: 'Lot Clearing', desc: 'Complete land and lot clearing for new construction, fence lines, or overgrown properties throughout Florence County.', price: 'Free estimate' },
-  { icon: '🔍', name: 'Tree Health Assessment', desc: 'Not sure if a tree is hazardous? Our experts assess structural integrity, disease, and risk to your property.', price: 'Free with any service' },
+  { icon: '🌳', name: 'Tree Removal', desc: 'Safe, efficient removal of dead, damaged, or hazardous trees of any size. We protect your property from start to finish.' },
+  { icon: '✂️', name: 'Tree Trimming & Pruning', desc: 'Expert shaping and pruning to improve tree health, curb appeal, and safety. Keeps your trees growing strong for years.' },
+  { icon: '🪵', name: 'Stump Grinding', desc: 'Complete stump removal using professional grinding equipment. Leave your yard clean, level, and ready to enjoy.' },
+  { icon: '⚡', name: 'Emergency Tree Service', desc: 'Storm damage? Fallen tree? We respond fast to protect your home and clear hazards before more damage occurs.' },
+  { icon: '🏠', name: 'Lot Clearing', desc: 'Complete land and lot clearing for new construction, fence lines, or overgrown properties throughout Florence County.' },
+  { icon: '🔍', name: 'Tree Health Assessment', desc: 'Not sure if a tree is hazardous? Our experts assess structural integrity, disease, and risk to your property.' },
 ]
 
 const areas = ['Florence', 'Darlington', 'Lake City', 'Hartsville', 'Marion', 'Mullins', 'Dillon', 'Timmonsville', 'Pamplico', 'Effingham', 'Johnsonville', 'Lamar']
@@ -231,7 +229,9 @@ export default function App() {
       <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 
       <div className="top-bar">
-        <div className="top-bar-brand">Florence <span>Tree Pros</span></div>
+        <div className="top-bar-brand">
+          <img src="/logo.png" alt="Florence Tree Pros" />
+        </div>
         <a href={`tel:${PHONE_RAW}`} className="call-btn">📞 {PHONE}</a>
       </div>
 
@@ -267,7 +267,6 @@ export default function App() {
                 <span className="service-icon">{s.icon}</span>
                 <h3>{s.name}</h3>
                 <p>{s.desc}</p>
-                <div className="service-price">{s.price}</div>
               </div>
             ))}
           </div>
@@ -283,10 +282,10 @@ export default function App() {
           <p className="lead">We're not a national franchise. We're your neighbors — and we treat your property like our own.</p>
           <div className="why-grid">
             {[
-              { num: '24/7', title: 'Emergency Response', desc: "Storm damage doesn't wait. Neither do we. Call any time — day or night." },
-              { num: '100%', title: 'Free Estimates', desc: 'No obligation, no pressure. We come to you, assess the job, and give you a straight price.' },
-              { num: '⭐⭐⭐⭐⭐', title: '5-Star Service', desc: "We clean up completely, respect your landscaping, and don't leave until the job is done right." },
-              { num: 'SC', title: 'Locally Rooted', desc: 'Based in Florence County. We know the local trees, soil, and storm patterns cold.' },
+              { num: '24/7', title: 'Emergency Response', desc: 'Available for emergency calls — storm damage and hazardous trees don\'t wait for business hours.' },
+              { num: '100%', title: 'Free Estimates', desc: 'Every job starts with a free on-site estimate — no obligation, no surprises, straight pricing.' },
+              { num: '⭐⭐⭐⭐⭐', title: '5-Star Service', desc: "We don't leave until the job is done right and your property is completely clean." },
+              { num: 'SC', title: 'Locally Rooted', desc: 'Florence County based — we know the local trees, soil, and neighborhoods inside and out.' },
             ].map(w => (
               <div className="why-item" key={w.title}>
                 <div className="why-num">{w.num}</div>
