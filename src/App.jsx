@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-const PHONE = '(843) 555-0100'
-const PHONE_RAW = '8435550100'
+const PHONE = '(843) 593-0118'
+const PHONE_RAW = '8435930118'
 
 const styles = `
   * { margin: 0; padding: 0; box-sizing: border-box; }
